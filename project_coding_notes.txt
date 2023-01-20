@@ -1,0 +1,60 @@
+Microsoft Windows [Version 10.0.19043.1288]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>h:
+
+H:\>cd H:\flask_applications\question_answer_app
+
+H:\flask_applications\question_answer_app>pip install virtualenv
+Requirement already satisfied: virtualenv in c:\users\admin\miniconda3\lib\site-packages (20.8.1)
+Requirement already satisfied: filelock<4,>=3.0.0 in c:\users\admin\miniconda3\lib\site-packages (from virtualenv) (3.1.0)
+Requirement already satisfied: distlib<1,>=0.3.1 in c:\users\admin\miniconda3\lib\site-packages (from virtualenv) (0.3.3)
+Requirement already satisfied: platformdirs<3,>=2 in c:\users\admin\miniconda3\lib\site-packages (from virtualenv) (2.4.0)
+Requirement already satisfied: backports.entry-points-selectable>=1.0.4 in c:\users\admin\miniconda3\lib\site-packages (from virtualenv) (1.1.0)
+Requirement already satisfied: six<2,>=1.9.0 in c:\users\admin\miniconda3\lib\site-packages (from virtualenv) (1.15.0)
+
+H:\flask_applications\question_answer_app>virtualenv qanda
+created virtual environment CPython3.9.5.final.0-64 in 404ms
+  creator CPython3Windows(dest=H:\flask_applications\question_answer_app\qanda, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\Admin\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==21.2.4, setuptools==58.2.0, wheel==0.37.0
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+H:\flask_applications\question_answer_app>qanda\Scripts\activate
+
+(qanda) H:\flask_applications\question_answer_app>pip install flask
+Collecting flask
+  Using cached Flask-2.0.2-py3-none-any.whl (95 kB)
+Collecting Jinja2>=3.0
+  Using cached Jinja2-3.0.3-py3-none-any.whl (133 kB)
+Collecting itsdangerous>=2.0
+  Using cached itsdangerous-2.0.1-py3-none-any.whl (18 kB)
+Collecting click>=7.1.2
+  Using cached click-8.0.3-py3-none-any.whl (97 kB)
+Collecting Werkzeug>=2.0
+  Using cached Werkzeug-2.0.2-py3-none-any.whl (288 kB)
+Collecting colorama
+  Using cached colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+Collecting MarkupSafe>=2.0
+  Using cached MarkupSafe-2.0.1-cp39-cp39-win_amd64.whl (14 kB)
+Installing collected packages: MarkupSafe, colorama, Werkzeug, Jinja2, itsdangerous, click, flask
+Successfully installed Jinja2-3.0.3 MarkupSafe-2.0.1 Werkzeug-2.0.2 click-8.0.3 colorama-0.4.4 flask-2.0.2 itsdangerous-2.0.1
+WARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the 'H:\flask_applications\question_answer_app\qanda\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(qanda) H:\flask_applications\question_answer_app>sqlite3 questions.db < schema.sql
+
+(qanda) H:\flask_applications\question_answer_app>.tables
+'.tables' is not recognized as an internal or external command,
+operable program or batch file.
+
+(qanda) H:\flask_applications\question_answer_app>sqlite3 questions.db
+SQLite version 3.31.0 2020-01-22 18:38:59
+Enter ".help" for usage hints.
+sqlite> .tables
+questions  users
+sqlite> select * from users;
+sqlite> select * from questions;
+sqlite> .exit
+
+(qanda) H:\flask_applications\question_answer_app>
